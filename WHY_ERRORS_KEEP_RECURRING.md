@@ -76,12 +76,22 @@ When making concurrency-related changes:
 
 3. **Restart Xcode** if errors persist after cleaning
 
-### Project Configuration Note
+### Project Configuration Issue ⚠️
 
-The project has an unusual iOS deployment target (`26.1`) which may contribute to caching issues. Consider updating in `project.pbxproj`:
+**IMPORTANT**: The project has an **invalid iOS deployment target** (`26.1`) which is causing build issues. iOS versions don't go that high (current versions are around 17-18).
+
+This invalid deployment target is likely a major contributor to the recurring build errors.
+
+**To fix permanently**, update in `project.pbxproj`:
 ```
 IPHONEOS_DEPLOYMENT_TARGET = 17.0;  // Instead of 26.1
 ```
+
+**How to fix**:
+1. Open `RemixRecipeXcode.xcodeproj`
+2. Select the project in the navigator
+3. Under "Deployment Info", change "iOS Deployment Target" from `26.1` to `17.0`
+4. Clean and rebuild
 
 ## 🔍 Understanding the Error
 
