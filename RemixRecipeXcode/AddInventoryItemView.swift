@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 /// Sheet view for adding new inventory items
+@MainActor
 struct AddInventoryItemView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss

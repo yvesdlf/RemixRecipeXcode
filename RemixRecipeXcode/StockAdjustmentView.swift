@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 /// Sheet view for adjusting inventory stock levels
+@MainActor
 struct StockAdjustmentView: View {
     let item: InventoryItem
     @Environment(\.modelContext) private var modelContext
