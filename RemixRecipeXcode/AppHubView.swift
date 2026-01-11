@@ -46,6 +46,19 @@ struct AppHubView: View {
                         Label("Upload", systemImage: "arrow.up.doc.fill")
                     }
                 }
+                
+                Section("New Features") {
+                    NavigationLink {
+                        InventoryListView()
+                    } label: {
+                        Label("Inventory", systemImage: "tray.fill")
+                    }
+                    NavigationLink {
+                        LocationsView()
+                    } label: {
+                        Label("Locations", systemImage: "mappin.circle.fill")
+                    }
+                }
             }
             .navigationTitle("Glass Kitchen Master")
         }
