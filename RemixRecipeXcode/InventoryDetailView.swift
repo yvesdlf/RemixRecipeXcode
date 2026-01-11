@@ -15,7 +15,7 @@ struct InventoryDetailView: View {
     var body: some View {
         List {
             // Status Card
-            Section {
+    // ...existing code...
                 VStack(spacing: 16) {
                     // Stock Level
                     HStack {
@@ -205,7 +205,7 @@ struct TransactionRow: View {
     }
     
     var body: some View {
-        HStack(spacing: 12) {
+    // ...existing code...
             // Icon
             Image(systemName: transaction.transactionType.icon)
                 .font(.title3)
@@ -303,7 +303,7 @@ import SwiftUI
 import SwiftData
 
 /// Detailed view of a single inventory item showing stock, transactions, and actions
-struct InventoryDetailView: View {
+// ...existing code...
     @Bindable var item: InventoryItem
     @Environment(\.modelContext) private var modelContext
     @State private var showingAdjustment = false
@@ -315,8 +315,6 @@ struct InventoryDetailView: View {
     
     var body: some View {
         List {
-            // Status Card
-            Section {
                 VStack(spacing: 16) {
                     // Stock Level
                     HStack {
@@ -493,7 +491,7 @@ struct InventoryDetailView: View {
 
 // MARK: - Transaction Row
 
-struct TransactionRow: View {
+// ...existing code...
     let transaction: InventoryTransaction
     
     private func currencyString(from value: Decimal) -> String {
