@@ -283,8 +283,8 @@ All 23 Swift files have been checked for:
 ### Architecture
 - **Pattern**: SwiftUI + SwiftData
 - **Minimum iOS**: 26.1
-- **Swift Version**: 5.0+
-- **Concurrency**: Swift 6 with MainActor isolation
+- **Swift Version**: 5.0+ (Swift 6 language features enabled)
+- **Concurrency**: MainActor isolation enabled
 
 ---
 
