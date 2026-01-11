@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 /// Main inventory list view showing all inventory items with search and filters
+@MainActor
 struct InventoryListView: View {
     @Query(sort: \InventoryItem.ingredientName) private var inventoryItems: [InventoryItem]
     @Environment(\.modelContext) private var modelContext
@@ -105,6 +106,7 @@ struct InventoryListView: View {
 
 // MARK: - Inventory Item Row
 
+@MainActor
 struct InventoryItemRow: View {
     let item: InventoryItem
     
@@ -170,6 +172,7 @@ struct InventoryItemRow: View {
 
 // MARK: - Low Stock Alert Row
 
+@MainActor
 struct LowStockAlertRow: View {
     let item: InventoryItem
     

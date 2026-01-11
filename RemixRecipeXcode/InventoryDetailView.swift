@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 /// Detailed view of a single inventory item showing stock, transactions, and actions
+@MainActor
 struct InventoryDetailView: View {
     @Bindable var item: InventoryItem
     @Environment(\.modelContext) private var modelContext
@@ -192,6 +193,7 @@ struct InventoryDetailView: View {
 
 // MARK: - Transaction Row
 
+@MainActor
 struct TransactionRow: View {
     let transaction: InventoryTransaction
     

@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 /// View for managing storage locations (kitchens, freezers, dry storage, etc.)
+@MainActor
 struct LocationsView: View {
     @Query(sort: \Location.name) private var locations: [Location]
     @Environment(\.modelContext) private var modelContext
@@ -61,6 +62,7 @@ struct LocationsView: View {
 
 // MARK: - Location Row
 
+@MainActor
 struct LocationRow: View {
     let location: Location
     
@@ -133,6 +135,7 @@ struct LocationRow: View {
 
 // MARK: - Location Detail View
 
+@MainActor
 struct LocationDetailView: View {
     @Bindable var location: Location
     @Environment(\.modelContext) private var modelContext
@@ -273,6 +276,7 @@ struct LocationDetailView: View {
 
 // MARK: - Add Location View
 
+@MainActor
 struct AddLocationView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
@@ -386,6 +390,7 @@ struct AddLocationView: View {
 
 // MARK: - Edit Location View
 
+@MainActor
 struct EditLocationView: View {
     @Bindable var location: Location
     @Environment(\.dismiss) private var dismiss

@@ -16,6 +16,7 @@ let mockRecipes: [MockRecipe] = [
     MockRecipe(id: UUID(), name: "Chocolate Fondant", description: "Lava cake dessert", cuisine: "Global", course: "Desserts")
 ]
 
+@MainActor
 struct RecipesView: View {
     @Query private var recipes: [Recipe]
     @State private var search: String = ""

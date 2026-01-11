@@ -1,8 +1,8 @@
 import SwiftUI
-import SwiftUI
 import SwiftData
 
 // This view works with the SwiftData Recipe model
+@MainActor
 struct RecipeDetailViewSwiftData: View {
     let recipe: Recipe // SwiftData @Model Recipe from Models.swift
     
